@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xray-interactive"
+version = "0.1.2"
+description = "Interactive, context-aware JSON configuration editor for Xray-core"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "xray-interactive contributors"}]
+dependencies = [
+  "windows-curses>=2.4.0; platform_system == 'Windows'"
+]
+
+[project.scripts]
+xray-interactive = "xray_interactive.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["xray_interactive*"]
